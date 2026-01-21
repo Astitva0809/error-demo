@@ -17,6 +17,8 @@ def error():
     x = None
     return x.id  # intentional crash
 
-@app.get("/sentry-debug")
-def trigger_error():
-    1 / 0  # ZeroDivisionError (intentional)
+@app.get("/home")
+def home():
+    return {"message": "Site is fast"}
+
+
